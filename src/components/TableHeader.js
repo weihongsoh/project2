@@ -6,7 +6,7 @@ const TableHeader = (props) => {
   // console.log("TableHeader", Object.keys(props.info[0]))
 
   return (
-    <React.Fragment>
+    <thead>
       <tr>
         <th className="col-sm-2">Carpark</th>
         <th className="col-sm-2">Category</th>
@@ -15,7 +15,7 @@ const TableHeader = (props) => {
         <th className="col-sm-2">Saturday Rate</th>
         <th className="col-sm-2">Sunday and Public Holiday Rate</th>
       </tr>
-    </React.Fragment>
+    </thead>
   )
 }
 

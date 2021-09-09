@@ -2,7 +2,6 @@ import React from 'react'
 import TableHeader from './TableHeader'
 import TableData from './TableData'
 
-
 const Table = (props) => {
 
   return (
@@ -12,11 +11,6 @@ const Table = (props) => {
         <TableData info={props.info} select={props.select} />
       </table>
     </div>
-
-
-
-
-
   )
 }
 

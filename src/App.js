@@ -42,34 +42,34 @@ const App = () => {
     let filter = typing.value.toUpperCase()
     // let filter = input.toUpperCase()
     let table = document.querySelector("#myTable")
-    let tr = table.querySelectorAll("tr")
+    let trr = table.querySelectorAll("tr")
     let td = ""
     let txtValue = ""
 
     // loop1
-    for (let i = 0; i < tr.length; i++) {
-      td = tr[i].querySelectorAll("td")[0]
+    for (let i = 0; i < trr.length; i++) {
+      td = trr[i].querySelectorAll("td")[0]
       if (td) {
         txtValue = td.textContent || td.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          tr[i].style.display = ""
+          trr[i].style.display = ""
         } else {
-          tr[i].style.display = "none"
+          trr[i].style.display = "none"
         }
       }
     } // end of loop1
 
     // loop2
-    for (let i = 1; i < tr.length; i++) {
+    for (let i = 1; i < trr.length; i++) {
       // if (day === 1 || 2 || 3 || 4 || 5) {
       // if (date === (1 || 2 || 3 || 4 || 5)) {
       // if (date === 1) {
       // console.log("DR", dayRate)
       if (dayRate === 2) {
         for (let j = 2; j <= 5; j++) {
-          tr[i].querySelectorAll("td")[j].style.background = ""
+          trr[i].querySelectorAll("td")[j].style.background = ""
         }
-        tr[i].querySelectorAll("td")[dayRate].style.background = "yellow"
+        trr[i].querySelectorAll("td")[dayRate].style.background = "yellow"
         // console.log("td", day)
         // console.log(tr.length)
         // console.log("weekDay", date)
@@ -82,9 +82,9 @@ const App = () => {
         // } else if (date === 6) {
       } else if (dayRate === 3) {
         for (let j = 2; j <= 5; j++) {
-          tr[i].querySelectorAll("td")[j].style.background = ""
+          trr[i].querySelectorAll("td")[j].style.background = ""
         }
-        tr[i].querySelectorAll("td")[dayRate].style.background = "yellow"
+        trr[i].querySelectorAll("td")[dayRate].style.background = "yellow"
         // console.log("satDay", date)
         // console.log("td", td)
         // tr[i].querySelectorAll("td")[2].style.background = ""
@@ -95,9 +95,9 @@ const App = () => {
         // } else if (date === 0) {
       } else if (dayRate === 4) {
         for (let j = 2; j <= 5; j++) {
-          tr[i].querySelectorAll("td")[j].style.background = ""
+          trr[i].querySelectorAll("td")[j].style.background = ""
         }
-        tr[i].querySelectorAll("td")[dayRate].style.background = "yellow"
+        trr[i].querySelectorAll("td")[dayRate].style.background = "yellow"
         // console.log("satDay", date)
         // console.log("td", td)
         // tr[i].querySelectorAll("td")[2].style.background = ""
@@ -108,9 +108,9 @@ const App = () => {
         // } else if (date === 0) {
       } else if (dayRate === 5) {
         for (let j = 2; j <= 5; j++) {
-          tr[i].querySelectorAll("td")[j].style.background = ""
+          trr[i].querySelectorAll("td")[j].style.background = ""
         }
-        tr[i].querySelectorAll("td")[dayRate].style.background = "yellow"
+        trr[i].querySelectorAll("td")[dayRate].style.background = "yellow"
         // console.log("sunDay", date)
         // console.log("td", td)
         // tr[i].querySelectorAll("td")[2].style.background = ""
@@ -144,33 +144,33 @@ const App = () => {
 
     // } // end of loop3
 
-    // // loop4
+    // // // loop4
     // for (let i = 1; i < tr.length; i++) {
 
     //   const timeLeft = ((((info[17]?.weekdays_rate_1.substring(0, info[17]?.weekdays_rate_1.indexOf("-"))) === "12am") ? 0 : parseInt(info[17]?.weekdays_rate_1.substring(0, info[17]?.weekdays_rate_1.indexOf("-")).replace(/\D/g, ""))) <= hour)
     //   const timeRight = ((parseInt(info[i - 1]?.weekdays_rate_1.substring(info[i - 1]?.weekdays_rate_1.indexOf("-"), info[i - 1]?.weekdays_rate_1.indexOf(":")).replace(/\D/g, "")) + 12) >= hour)
 
     //   for (let j = 2; j <= 5; j++) {
-    //     // if (day === dayRate) {
-    //     //   if() {
+    //     if (dayRate === j) {
+    //       tr[i].querySelectorAll("td")[j].style.background = "yellow"
+    //       //   if() {
+    //       //   }
+    //       // }
+    //       // console.log(tr[1].querySelectorAll("td")[j])
+    //     }
+
+
+    //     // if (dayRate === j) {
+    //     //   if (info[i - 1]?.weekdays_rate_1.includes("Daily")) {
+    //     //     tr[i].querySelectorAll("td")[j].style.background = "yellow"
+    //     //   } else if (info[i - 1]?.weekdays_rate_1.includes("Mon" || "Tue" || "Wed" || "Thu" || "Fri")) {
+    //     //     tr[i].querySelectorAll("td")[j].style.background = "yellow"
+    //     //   } else if ((timeLeft && timeRight)) {
+    //     //     tr[i].querySelectorAll("td")[j].style.background = "yellow"
+    //     //   } else {
+    //     //     tr[i].querySelectorAll("td")[j].style.background = ""
     //     //   }
     //     // }
-    //     // tr[i].querySelectorAll("td")[dayRate].style.background = "yellow"
-    //     // console.log(tr[1].querySelectorAll("td")[j])
-
-
-
-    //     if (day === dayRate) {
-    //       if (info[i - 1]?.weekdays_rate_1.includes("Daily")) {
-    //         tr[i].querySelectorAll("td")[dayRate].style.background = "yellow"
-    //       } else if (info[i - 1]?.weekdays_rate_1.includes("Mon" || "Tue" || "Wed" || "Thu" || "Fri")) {
-    //         tr[i].querySelectorAll("td")[dayRate].style.background = "yellow"
-    //       } else if ((timeLeft && timeRight)) {
-    //         tr[i].querySelectorAll("td")[dayRate].style.background = "yellow"
-    //       } else {
-    //         tr[i].querySelectorAll("td")[j].style.background = ""
-    //       }
-    //     }
 
     //   }
 
@@ -179,12 +179,12 @@ const App = () => {
     // } // end of loop4
 
 
-    console.log(tr[1].querySelectorAll("td")[2])
-    console.log(dayRate)
+    // console.log(tr[1].querySelectorAll("td"))
+    // console.log(dayRate)
 
 
 
-    setToggle(toggle ? false : true)
+    // setToggle(toggle ? false : true)
   } // end of handleChange
 
 
@@ -203,7 +203,7 @@ const App = () => {
   // time check above
 
   const handleSelect = (value) => {
-    setToggle(toggle ? false : true)
+    // setToggle(toggle ? false : true)
     setSelect(value)
   } // end of handleSelect
 
@@ -226,7 +226,7 @@ const App = () => {
     // console.log("manualDate", typeof (manualDate))
 
     setDayRate(value)
-    setToggle(toggle ? false : true)
+    // setToggle(toggle ? false : true)
   } // end of handleSubmit
 
   const checkRate = async () => {
@@ -241,7 +241,7 @@ const App = () => {
     } catch (err) {
       console.log(err)
     }
-    setToggle(toggle ? false : true)
+    // setToggle(toggle ? false : true)
   } // end of checkRate
 
   useEffect(() => {
@@ -255,10 +255,6 @@ const App = () => {
 
       <Form handleChange={handleChange} handleSelect={handleSelect} handleSubmit={handleSubmit} />
 
-      {/*
-      <div date={date}>Date: {date}</div>
-      <div time={time}>Time: {time}</div>
-*/}
 
       <Table info={info} select={select} />
       {/* {JSON.stringify(info)}  */}
@@ -267,3 +263,8 @@ const App = () => {
 }
 
 export default App;
+
+{/*
+<div date={date}>Date: {date}</div>
+<div time={time}>Time: {time}</div>
+*/}
