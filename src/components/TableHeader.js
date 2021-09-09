@@ -6,16 +6,16 @@ const TableHeader = (props) => {
   // console.log("TableHeader", Object.keys(props.info[0]))
 
   return (
-    <thead>
+    <React.Fragment>
       <tr>
-        <th>Carpark</th>
-        <th>Category</th>
-        <th>Weekdays Rate 1</th>
-        <th>Weekdays Rate 2</th>
-        <th>Saturday Rate</th>
-        <th>Sunday and Public Holiday Rate</th>
+        <th className="col-sm-2">Carpark</th>
+        <th className="col-sm-2">Category</th>
+        <th className="col-sm-2">Weekdays Rate 1</th>
+        <th className="col-sm-2">Weekdays Rate 2</th>
+        <th className="col-sm-2">Saturday Rate</th>
+        <th className="col-sm-2">Sunday and Public Holiday Rate</th>
       </tr>
-    </thead>
+    </React.Fragment>
   )
 }
 

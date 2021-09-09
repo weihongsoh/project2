@@ -6,11 +6,13 @@ const Input = (props) => {
   const handleChange = (event) => {
     // console.log(event.target.value, "from input")
     props.handleChange(event.target.value)
+
+
   }
 
   return (
     <React.Fragment>
-      <input placeholder={props.placeholder} type={props.type} onChange={handleChange} ></input>
+      <input type={props.type} id={props.id} placeholder={props.placeholder} onKeyUp={handleChange} ></input>
     </React.Fragment>
   )
 }
