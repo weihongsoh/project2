@@ -123,7 +123,7 @@ const App = () => {
       }
     } // end of for loop2
 
-    // loop3
+    // // loop3
     // for (let i = 1; i < tr.length; i++) {
     //   if (info[i - 1]?.weekdays_rate_1.includes("Daily")) {
     //     for (let j = 2; j <= 5; j++) {
@@ -151,40 +151,42 @@ const App = () => {
     //   const timeRight = ((parseInt(info[i - 1]?.weekdays_rate_1.substring(info[i - 1]?.weekdays_rate_1.indexOf("-"), info[i - 1]?.weekdays_rate_1.indexOf(":")).replace(/\D/g, "")) + 12) >= hour)
 
     //   for (let j = 2; j <= 5; j++) {
-    //     // tr[i].querySelectorAll("td")[dayRate].style.background = "yellow"
-    //     console.log(tr[i].querySelectorAll("td"))
-
-
-
-
-
-
-
-
-    //     // if (dayRate === j) {
-    //     //   if (info[i - 1]?.weekdays_rate_1.includes("Daily")) {
-    //     //     tr[i].querySelectorAll("td")[dayRate].style.background = "yellow"
-    //     //   } else if (info[i - 1]?.weekdays_rate_1.includes("Mon" || "Tue" || "Wed" || "Thu" || "Fri")) {
-    //     //     tr[i].querySelectorAll("td")[dayRate].style.background = "yellow"
-    //     //   } else if ((timeLeft && timeRight)) {
-    //     //     tr[i].querySelectorAll("td")[dayRate].style.background = "yellow"
-    //     //   } else {
-    //     //     tr[i].querySelectorAll("td")[j].style.background = ""
+    //     // if (day === dayRate) {
+    //     //   if() {
     //     //   }
     //     // }
+    //     // tr[i].querySelectorAll("td")[dayRate].style.background = "yellow"
+    //     // console.log(tr[1].querySelectorAll("td")[j])
+
+
+
+    //     if (day === dayRate) {
+    //       if (info[i - 1]?.weekdays_rate_1.includes("Daily")) {
+    //         tr[i].querySelectorAll("td")[dayRate].style.background = "yellow"
+    //       } else if (info[i - 1]?.weekdays_rate_1.includes("Mon" || "Tue" || "Wed" || "Thu" || "Fri")) {
+    //         tr[i].querySelectorAll("td")[dayRate].style.background = "yellow"
+    //       } else if ((timeLeft && timeRight)) {
+    //         tr[i].querySelectorAll("td")[dayRate].style.background = "yellow"
+    //       } else {
+    //         tr[i].querySelectorAll("td")[j].style.background = ""
+    //       }
+    //     }
 
     //   }
-
-
-
 
 
 
     // } // end of loop4
 
 
+    console.log(tr[1].querySelectorAll("td")[2])
+    console.log(dayRate)
+
+
+
     setToggle(toggle ? false : true)
   } // end of handleChange
+
 
   // console.log(info[4]?.weekdays_rate_1.includes("-"))
   // console.log(info[4]?.weekdays_rate_1.indexOf("-"))
