@@ -7,8 +7,8 @@ A web app that displays the carpark rates in Singapore (for major shopping malls
 Parking Checkup provides a list of carparks and the carpark rates according to the day of the week.
 
 ### Technical Used
-- Vanilla Javascript
-- React JS
+- HTML, CSS, Javascript
+- React
 
 ### User Stories
 
